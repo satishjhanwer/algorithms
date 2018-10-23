@@ -16,6 +16,13 @@ const solution = (arr) => {
   return arr;
 };
 
+// Flatten a array
+// Satish Jhanwer
+// Check the performance on http://jsben.ch/ for below code
+const flatten = (arr) => {
+  return Array.isArray(arr) ? Array.prototype.concat(...arr.map(flatten)) : arr;
+};
+
 module.exports = {
   solution: solution,
 };
